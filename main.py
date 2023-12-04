@@ -1,4 +1,4 @@
-from grafo import Graph ; from dfs import dfs ; from kruskal import kruskal 
+from grafo import Graph ; from dfs import dfs ; from bfs import bfs; from kruskal import kruskal 
 from graficar import visualizar_grafo ;
 
 # Crear una instancia de la clase Graph
@@ -13,11 +13,14 @@ grafo.add_E('B', 'C', 2)
 grafo.add_E('A' , 'C' , 1)
 
 
-
 # Algoritmo DFS
-print("DFS:")
-dfs(grafo, 'A')
-gr = kruskal(grafo)
+# print("DFS:")
+# dfs(grafo, 'A')
 
+# Algoritmo BFS
+# print("BFS:")
+# bfs(grafo, 'A')
+
+gr = kruskal(grafo)
 visualizar_grafo(grafo , gr , titulo="Grafo Kruskal")
 
