@@ -1,7 +1,7 @@
 from collections import deque
 
 def bfs(grafo, nodoInicial):
-    # Inicia una cola para hacer la busqueda
+    # Inicia una cola para hacer la busqueda (FIFO)
     cola = deque([nodoInicial])
     
     # Inicia un conjunto para hacer un registro de los nodos visitados

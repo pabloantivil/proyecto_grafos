@@ -4,14 +4,16 @@ from graficar import visualizar_grafo ;
 # Crear una instancia de la clase Graph
 grafo = Graph()
 
-# Agregar vertices y aristas a tu grafo
+# Agregar vertices y aristas al grafo
 grafo.add_V('A')
 grafo.add_V('B')
 grafo.add_V('C')
+grafo.add_V('D')
+grafo.add_V('E')
 grafo.add_E('A', 'B', 1)
 grafo.add_E('B', 'C', 2)
-grafo.add_E('A' , 'C' , 1)
-
+grafo.add_E('A' , 'D' , 1)
+grafo.add_E('B' , 'E' , 1)
 
 # Algoritmo DFS
 # print("DFS:")
@@ -21,6 +23,6 @@ grafo.add_E('A' , 'C' , 1)
 # print("BFS:")
 # bfs(grafo, 'A')
 
-gr = kruskal(grafo)
-visualizar_grafo(grafo , gr , titulo="Grafo Kruskal")
+# gr = kruskal(grafo)
+# visualizar_grafo(grafo , gr , titulo="Grafo Kruskal")
 
