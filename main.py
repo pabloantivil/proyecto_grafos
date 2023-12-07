@@ -4,7 +4,8 @@ from bfs import bfs
 from kruskal import kruskal
 from graficar import visualizar_grafo, imprimir_matriz
 from prim import prim
-from lol import floyd_warshall, minimo, dijkstra
+from floyd_warshall import floyd_warshall
+from Dijkstra import minimo, dijkstra
 from emparejamiento import emparejamiento
 
 # Crear una instancia de la clase Graph
