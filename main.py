@@ -8,10 +8,14 @@ grafo = Graph()
 grafo.add_V('A')
 grafo.add_V('B')
 grafo.add_V('C')
+grafo.add_V('O')
+
+
 grafo.add_E('A', 'B', 1)
 grafo.add_E('B', 'C', 2)
 grafo.add_E('A' , 'C' , 1)
-
+grafo.add_E('A' , 'O' , 7)
+grafo.add_E('B' , 'O' , 1)
 
 
 # Algoritmo DFS
