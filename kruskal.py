@@ -22,5 +22,4 @@ def kruskal(grafo):
 
             for vertice in nuevo_conjunto:
                 subconjuntos[vertice] = nuevo_conjunto
-    print(resultado)
     return resultado
