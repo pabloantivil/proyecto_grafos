@@ -20,9 +20,14 @@ class Graph():
                         print("Conexion existente")
                         break
                 if a == True:
-                    print(self.grafo[v1][x].keys(), v2)
                     self.grafo[v1].append({v2: peso})
             else:
                 self.grafo[v1].append({v2: peso})
         else:
             print("No vertice")
+
+    def add_V_pref(self, v, pref):
+        if v in self.grafo:
+            print("Vertice existente")
+        else:
+            self.grafo.update({v: pref})
