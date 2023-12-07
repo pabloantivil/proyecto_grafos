@@ -34,7 +34,7 @@ def minimo(self, lista):
 
 def dijkstra(self, salida):
     dist = {v: float('inf') for v in self.grafo}
-    prev = {v: None for v in self.grafo}
+  
     dist[salida] = 0
 
     Q = [v for v in self.grafo]
@@ -48,6 +48,6 @@ def dijkstra(self, salida):
             # Relajar arista
             if dist[vecino] > dist[u] + peso:
                 dist[vecino] = dist[u] + peso
-                prev[vecino] = u
+               
 
-    return dist, prev
+    return dist

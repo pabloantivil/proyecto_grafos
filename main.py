@@ -2,7 +2,7 @@ from grafo import Graph
 from dfs import dfs
 from bfs import bfs
 from kruskal import kruskal
-from graficar import visualizar_grafo
+from graficar import visualizar_grafo, imprimir_matriz
 from prim import prim
 from lol import floyd_warshall, minimo, dijkstra
 from emparejamiento import emparejamiento
@@ -17,7 +17,7 @@ grafo.add_V('B')
 grafo.add_V('C')
 grafo.add_V('D')
 grafo.add_V('E')
-grafo.add_E('A', 'B', 1)
+grafo.add_E('A', 'B', 2)
 grafo.add_E('A', 'E', 2)
 grafo.add_E('B', 'C', 2)
 grafo.add_E('A', 'D', 1)
@@ -51,9 +51,10 @@ Graph.dijkstra = dijkstra
 print('\nDijkstra: \n', grafo.dijkstra('A'))
 
 # Floyd-Warshall
-Graph.floyd_warshall = floyd_warshall
-print('\nfloyd_warshall: \n', grafo.floyd_warshall())
 
+Graph.floyd_warshall = floyd_warshall
+print('\nfloyd_warshall: ')
+imprimir_matriz(grafo.floyd_warshall())
 
 # Algoritmo Kruskal
 gr = kruskal(grafo)
@@ -67,4 +68,3 @@ arbol_minimo_prim = prim(grafo, nodo_inicio)
 # Visualizar el grafo original con las aristas del árbol mínimo en rojo
 visualizar_grafo(grafo, arbol_minimo_prim,
                  "Grafo Original con Árbol Mínimo (Prim)")
-
