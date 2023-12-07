@@ -18,6 +18,7 @@ grafo.add_V('C')
 grafo.add_V('D')
 grafo.add_V('E')
 grafo.add_E('A', 'B', 1)
+grafo.add_E('A', 'E', 2)
 grafo.add_E('B', 'C', 2)
 grafo.add_E('A', 'D', 1)
 grafo.add_E('B', 'E', 1)
@@ -47,11 +48,11 @@ dfs(grafo, 'A')
 # Dijkstra
 Graph.minimo = minimo
 Graph.dijkstra = dijkstra
-print('\nDijkstra: ', grafo.dijkstra('A'))
+print('\nDijkstra: \n', grafo.dijkstra('A'))
 
 # Floyd-Warshall
 Graph.floyd_warshall = floyd_warshall
-print('\nfloyd_warshall: ', grafo.floyd_warshall())
+print('\nfloyd_warshall: \n', grafo.floyd_warshall())
 
 
 # Algoritmo Kruskal

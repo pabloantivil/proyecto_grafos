@@ -1,19 +1,22 @@
 from collections import deque
 
+
 def bfs(grafo, nodoInicial):
     # Inicia una cola para hacer la busqueda (FIFO)
     cola = deque([nodoInicial])
-    
+
     # Inicia un conjunto para hacer un registro de los nodos visitados
     visitados = set([nodoInicial])
 
-    print(nodoInicial, end=' ')
-
+    print(nodoInicial, end=':0 ')
+    c = 1
     while cola:
         nodoActual = cola.popleft()  # obtener y eliminar el primer nodo de la cola
         for vecinos_diccionario in grafo.grafo[nodoActual]:
-            vecino = list(vecinos_diccionario.keys())[0] # obtiene el vecino del diccionario
+            # obtiene el vecino del diccionario
+            vecino = list(vecinos_diccionario.keys())[0]
             if vecino not in visitados:
-                print(vecino, end=' ')
+                print(vecino, end=f':{c} ')
                 visitados.add(vecino)
                 cola.append(vecino)
+        c += 1
