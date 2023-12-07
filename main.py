@@ -2,9 +2,10 @@ from grafo import Graph
 from dfs import dfs
 from bfs import bfs
 from kruskal import kruskal
-from graficar import visualizar_grafo
+from graficar import visualizar_grafo, imprimir_matriz
 from prim import prim
-from lol import floyd_warshall, minimo, dijkstra
+from floyd_warshall import floyd_warshall
+from Dijkstra import minimo, dijkstra
 from emparejamiento import emparejamiento
 
 # Crear una instancia de la clase Graph
@@ -17,7 +18,8 @@ grafo.add_V('B')
 grafo.add_V('C')
 grafo.add_V('D')
 grafo.add_V('E')
-grafo.add_E('A', 'B', 1)
+grafo.add_E('A', 'B', 2)
+grafo.add_E('A', 'E', 2)
 grafo.add_E('B', 'C', 2)
 grafo.add_E('A', 'D', 1)
 grafo.add_E('B', 'E', 1)
@@ -47,12 +49,13 @@ dfs(grafo, 'A')
 # Dijkstra
 Graph.minimo = minimo
 Graph.dijkstra = dijkstra
-print('\nDijkstra: ', grafo.dijkstra('A'))
+print('\nDijkstra: \n', grafo.dijkstra('A'))
 
 # Floyd-Warshall
-Graph.floyd_warshall = floyd_warshall
-print('\nfloyd_warshall: ', grafo.floyd_warshall())
 
+Graph.floyd_warshall = floyd_warshall
+print('\nfloyd_warshall: ')
+imprimir_matriz(grafo.floyd_warshall())
 
 # Algoritmo Kruskal
 
@@ -69,4 +72,3 @@ arbol_minimo_prim = prim(grafo, nodo_inicio)
 # Visualizar el grafo original con las aristas del árbol mínimo en rojo
 visualizar_grafo(grafo, arbol_minimo_prim,
                  "Grafo Original con Árbol Mínimo (Prim)")
-
