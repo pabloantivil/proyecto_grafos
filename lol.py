@@ -45,6 +45,7 @@ def dijkstra(self, salida):
 
         for x in self.grafo[u]:
             vecino, peso = list(x.items())[0]
+            # Relajar arista
             if dist[vecino] > dist[u] + peso:
                 dist[vecino] = dist[u] + peso
                 prev[vecino] = u
