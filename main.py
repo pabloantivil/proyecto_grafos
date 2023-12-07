@@ -55,12 +55,15 @@ print('\nfloyd_warshall: ', grafo.floyd_warshall())
 
 
 # Algoritmo Kruskal
+
+
+
 gr = kruskal(grafo)
 visualizar_grafo(grafo, gr, titulo="Grafo Kruskal")
 
 
 # Aplicar el algoritmo de Prim con un nodo de inicio
-nodo_inicio = 'A'
+nodo_inicio = 'B'
 arbol_minimo_prim = prim(grafo, nodo_inicio)
 
 # Visualizar el grafo original con las aristas del árbol mínimo en rojo

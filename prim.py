@@ -16,13 +16,10 @@ def prim(grafo, inicio):
     for arista in aristas_ordenadas:
         v1, v2, peso = arista
 
+        # Considerar solo aristas dirigidas hacia vértices no visitados
         if v1 in visitados and v2 not in visitados:
             visitados.add(v2)
             aristas_arbol_minimo.append([v1, v2, peso])
-        elif v2 in visitados and v1 not in visitados:
-            visitados.add(v1)
-            aristas_arbol_minimo.append([v1, v2, peso])
-        elif v1 in visitados and v2 in visitados:
-            continue
 
+    print(aristas_arbol_minimo)
     return aristas_arbol_minimo

@@ -47,6 +47,5 @@ def dijkstra(self, salida):
             vecino, peso = list(x.items())[0]
             if dist[vecino] > dist[u] + peso:
                 dist[vecino] = dist[u] + peso
-                prev[vecino] = u
 
-    return dist, prev
+    return dist

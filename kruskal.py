@@ -10,7 +10,6 @@ def kruskal(grafo):
     aristas_ordenadas = sorted(aristas, key=lambda item: item[2])
     resultado = []
     subconjuntos = {v: {v} for v in grafo.grafo}
-
     for arista in aristas_ordenadas:
         v1, v2, peso = arista
         conjunto_v1 = subconjuntos[v1]
